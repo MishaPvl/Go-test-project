@@ -49,7 +49,7 @@ func helloWorldHandler(w http.ResponseWriter, r *http.Request) {
 	index_file := Contains(files_names_ext, r.URL.Path[1:])
 
 	if r.URL.Path[1:] == "" {
-		_, _ = fmt.Fprintf(w, "<h1>Hi, there!</h1>")
+		_, _ = fmt.Fprintf(w, "<h1>Hello, there!</h1>")
 
 	    for index, name := range files_names_ext {
 	    	_, _ = fmt.Fprintf(w, "<a href='/%s'>%s</a><br>", name, files_names[index])
